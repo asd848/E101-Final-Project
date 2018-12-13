@@ -20,18 +20,21 @@ void setup() {
 }
 
 void loop() {
-  
+  int currentTime = millis();
   // analogRead values from 0 to 1023 (10 bit ADC)
   int sensorVal0 = analogRead(inputPin0);
   int sensorVal1 = analogRead(inputPin1);
  
   
   // print the results to the serial monitor:                    
-  Serial.print(sensorVal0);
-  Serial.print("  ");
+  Serial.println(sensorVal0);
+//  Serial.print("  ");
   Serial.println(sensorVal1);  
   
-  delay(10);  // sample time ms                 
+  delay(10);  // sample time ms 
+//  Serial.print("Current Time is:");
+//  Serial.println(millis() - currentTime);            
 }
+
 
 
